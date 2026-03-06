@@ -1,15 +1,13 @@
-from flask import Flask
+from flask import Flask, render_template
 import os
 
 app = Flask(__name__)
 
 @app.route("/")
 def home():
-    return f"""
-    DevOps Platform Running............🚀
-    Version: {os.getenv("APP_VERSION","v1")}
-    Environment: {os.getenv("APP_ENV","dev")}
-    """
+    version = os.getenv("APP_VERSION", "v1")
+    env = os.getenv("APP_ENV", "dev")
+    return render_template("index.html", version=version, env=env)
 
 @app.route("/health")
 def health():
