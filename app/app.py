@@ -6,7 +6,7 @@ app = Flask(__name__)
 @app.route("/")
 def home():
     return f"""
-    DevOps Platform Running OK 🚀
+    DevOps Platform Running  🚀
     Version: {os.getenv("APP_VERSION","v1")}
     Environment: {os.getenv("APP_ENV","dev")}
     """
