@@ -20,7 +20,7 @@ jobs:
       run: docker build -t krishna/devops-app:latest .
 
     - name: Push image
-      run: docker push krishna/devops-app:latest
+      run: docker push krishna20047/devops-app:latest
 
     - name: Deploy
       run: kubectl apply -f k8s/
