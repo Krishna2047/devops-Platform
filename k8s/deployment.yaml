@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: devops-app
-        image: krishna20047/devops-app:v1
+        image: krishna20047/devops-app:v2
         ports:
         - containerPort: 5000
         env:
